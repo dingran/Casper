@@ -2,12 +2,13 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#author}}
-{{!-- Everything inside the #author tags pulls data from the author --}}
+    {{!-- Everything inside the #author tags pulls data from the author --}}
 
 
-<header class="site-archive-header">
-    {{> site-header}}
-    {{> header-background background=cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
+    <header class="site-archive-header">
+        {{> site-header}}
+        {{> header-background background=cover_image}}
+        {{!--Special header-image.hbs partial to generate the background image--}}
         <div class="inner">
             <div class="site-header-content author-header">
                 {{#if profile_image}}
@@ -28,20 +29,23 @@
                             {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
                         </div>
                         {{#if website}}
-                            <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
+                            <span class="author-social-link"><a href="{{website}}" target="_blank"
+                                    rel="noopener">Website</a></span>
                         {{/if}}
                         {{#if twitter}}
-                            <span class="author-social-link"><a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
+                            <span class="author-social-link"><a href="{{twitter_url}}" target="_blank"
+                                    rel="noopener">Twitter</a></span>
                         {{/if}}
                         {{#if facebook}}
-                            <span class="author-social-link"><a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
+                            <span class="author-social-link"><a href="{{facebook_url}}" target="_blank"
+                                    rel="noopener">Facebook</a></span>
                         {{/if}}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+        </div>
+    </header>
 {{/author}}
 
 {{!-- The main content area --}}

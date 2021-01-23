@@ -3187,7 +3187,8 @@ figure.kg-width-full img {
 body {
     overflow: visible;
 }
-.post-full-content {
+
+.post-full-content-with-toc {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     padding: 0 0 6vw;

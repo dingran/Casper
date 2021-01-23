@@ -185,6 +185,11 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
     <script>
         $(document).ready(function () {
+            var hasTOC = $(".toc").children().length
+            if (hasTOC) {
+                $(".post-full-content").addClass("post-full-content-with-toc");
+            }
+
             // FitVids - start
             var $postContent = $(".post-full-content");
             $postContent.fitVids();

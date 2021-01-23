@@ -3139,9 +3139,9 @@ Usage (In Ghost editor):
 }
 
 /* hide banner */
-/* .home-header-hide {
+.home-header-hide {
     display: none;
-} */
+}
 
 /* Styling TOC: https://ghost.org/docs/tutorials/adding-a-table-of-contents/#styling-the-table-of-contents */
 /* Offset headings from fixed header */

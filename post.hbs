@@ -104,11 +104,13 @@ into the {body} of the default.hbs template --}}
                 {{/if}}
 
                 <section class="post-full-content">
-                    <aside class="toc-container">
-                        <div class="toc"></div>
-                    </aside>
+                    {{#if access}}
+                        <aside class="toc-container">
+                            <div class="toc"></div>
+                        </aside>
+                    {{/if}}
                     <div class="post-content">
-                        {{!-- {{#if @labs.members}}
+                        {{#unless access}}
                             <div class='membersonly-excerpt'>
                                 <p>
                                     This is probably one of the best posts I've ever written, so it's limited to
@@ -130,7 +132,7 @@ into the {body} of the default.hbs template --}}
                                     pretium fusce id velit.
                                 </p>
                             </div>
-                        {{/if}} --}}
+                        {{/unless}}
                         {{content}}
                     </div>
                 </section>

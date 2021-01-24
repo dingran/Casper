@@ -3236,3 +3236,11 @@ body {
         rgba(255, 255, 255, 0) 100%
     );
 }
+
+.post-content p:first-of-type:first-letter {
+    float: left;
+    margin: 2px 0 0 -2px;
+    padding: 0 10px 0 0;
+    font-size: 7rem;
+    line-height: 0.85em;
+}

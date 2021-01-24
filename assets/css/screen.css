@@ -3216,3 +3216,23 @@ body {
         margin: 0;
     }
 }
+
+/* membersonly excerpt */
+.membersonly-excerpt {
+    position: relative;
+}
+
+.membersonly-excerpt:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.9) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}

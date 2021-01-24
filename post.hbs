@@ -206,7 +206,7 @@ into the {body} of the default.hbs template --}}
             }
 
             var hasPreview = $(".membersonly-excerpt")
-            if (hasPreview && false) {
+            if (hasPreview) {
                 // strip trailing slash then split by slash
                 var pathArray = window.location.pathname.replace(/\/$/, "").split('/');
                 var slug = pathArray[pathArray.length - 1]

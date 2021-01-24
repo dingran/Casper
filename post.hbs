@@ -219,6 +219,24 @@ into the {body} of the default.hbs template --}}
                 $(".post-full-content").addClass("post-full-content-with-toc");
             }
 
+            var hasPreview = $(".membersonly-excerpt")
+            if (hasPreview) {
+                // strip trailing slash then split by slash
+                var pathArray = window.location.pathname.replace(/\/$/, "").split('/');
+                var slug = pathArray[pathArray.length - 1]
+                var domainUrlDev = 'http://localhost:3000' // local dev
+                var domainUrl = 'https://ghost-preview.dingran.me'
+                var previewEndpoint = `${domainUrl}/api/ghost?slug=${slug}`
+                console.log(previewEndpoint)
+                fetch(previewEndpoint).then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        $('.membersonly-excerpt').html(data.response.html)
+                        $('.post-full-content').css('z-index', '-10')
+                    });
+
+            }
+
             // FitVids - start
             var $postContent = $(".post-full-content");
             $postContent.fitVids();

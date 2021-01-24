@@ -232,7 +232,6 @@ into the {body} of the default.hbs template --}}
                     .then(data => {
                         console.log(data)
                         $('.membersonly-excerpt').html(data.response.html)
-                        $('.post-full-content').css('z-index', '-10')
                     });
 
             }

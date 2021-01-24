@@ -3237,7 +3237,7 @@ body {
     );
 }
 
-.post-content p:first-child:first-letter {
+.post-content > p:first-child:first-letter {
     float: left;
     margin: 2px 0 0 -2px;
     padding: 0 10px 0 0;

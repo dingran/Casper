@@ -37,7 +37,11 @@
         {{/if}}
 
         {{#if @labs.members}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            {{#if @member}}
+                <a class="subscribe-button" href="#/portal/account">Account</a>
+            {{else}}
+                <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            {{/if}}
         {{/if}}
     </div>
 </nav>

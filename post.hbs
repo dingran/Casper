@@ -216,7 +216,6 @@ into the {body} of the default.hbs template --}}
                 console.log(previewEndpoint)
                 fetch(previewEndpoint).then(response => response.json())
                     .then(data => {
-                        console.log(data)
                         $('.membersonly-excerpt').html(data.response.html)
                     });
 

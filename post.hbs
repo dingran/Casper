@@ -211,7 +211,7 @@ into the {body} of the default.hbs template --}}
                 var pathArray = window.location.pathname.replace(/\/$/, "").split('/');
                 var slug = pathArray[pathArray.length - 1]
                 var domainUrlDev = 'http://localhost:3000' // local dev
-                var domainUrl = 'https://ghost-preview.dingran.me'
+                var domainUrl = 'https://utils.dingran.me'
                 var previewEndpoint = `${domainUrl}/api/ghost?slug=${slug}`
                 console.log(previewEndpoint)
                 fetch(previewEndpoint).then(response => response.json())

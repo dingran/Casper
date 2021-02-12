@@ -341,7 +341,7 @@ body {
 
 /* Site Nav Hack Explanation (above):
 
-What's happening above is .site-nav-left is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to reach them. Also, there is a small gradient on the left and right side covering the menu so that the menu goes offscreen smoothly.
+What's happening above is .site-nav-left is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to redch them. Also, there is a small gradient on the left and right side covering the menu so that the menu goes offscreen smoothly.
 
 The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px of padding-bottom and a 40px fixed height parent (.site-nav) hides that entirely. Slightly hacky code. But nice clean end-result.
 
@@ -3186,6 +3186,13 @@ figure.kg-width-full img {
 }
 body {
     overflow: visible;
+}
+
+.toc ol {
+    margin: 0;
+}
+.toc {
+    margin-bottom: 1.5em;
 }
 
 @media (min-width: 1170px) {

@@ -103,16 +103,18 @@ into the {body} of the default.hbs template --}}
                     </figure>
                 {{/if}}
 
-                <section class="post-full-content">
+                <div class='content-and-toc-container'>
                     {{#if access}}
                         <aside class="toc-container">
                             <div class="toc"></div>
                         </aside>
                     {{/if}}
-                    <div class="post-content">
-                        {{content}}
-                    </div>
-                </section>
+                    <section class="post-full-content">
+                        <div class="post-content">
+                            {{content}}
+                        </div>
+                    </section>
+                </div>
 
                 <script type="text/javascript"
                     src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-600cc1344dfb424f"></script>
@@ -196,9 +198,6 @@ into the {body} of the default.hbs template --}}
                 var n = $(".toc > .toc-list > li").length
                 if (n < 5) {
                     $(".toc").remove()
-                }
-                else {
-                    $(".post-full-content").addClass("post-full-content-with-toc");
                 }
             }
 

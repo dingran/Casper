@@ -193,7 +193,7 @@ into the {body} of the default.hbs template --}}
         $(document).ready(function () {
             var hasTOC = $(".toc").children().length
             if (hasTOC) {
-                var n = $(".toc li").length
+                var n = $(".toc > li").length
                 if (n < 5) {
                     $(".toc").remove()
                 }

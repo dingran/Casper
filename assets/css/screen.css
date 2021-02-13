@@ -3179,10 +3179,21 @@ body {
 
 @media (min-width: 1170px) {
     .post-full-content {
-        /* flex-grow: 0;
-        flex-shrink: 0; */
-        /* flex-basis: 1040px; */
         width: 1040px;
+        /* when post-full-content does have a full width image with class kg-width-wide, 
+        the image width is set by max-width 1040px, if we don't set the post-full-content-width, 
+        the text will be as wide as the iamge, and then some padding (130px each side, 
+        and the post full content area will be 1300px wide */
+
+        /* solely relying on width==1040px doesnt' work when there isn't a full width image
+        in this case, because the smaller image is set to have width of 100% so it will be the same width as
+        the text, the 130px horizontal padding is still there, the whole flex box will try to fit into the "inner"
+        area which is 1040px wide. And the width of the post-full-content area will be determined from there, i.e.
+        1040px inner, leave some space to TOC, substract 2x 130px padding
+        therefore these flex settings become effective, mainly, don't shrink */
+        flex-shrink: 0;
+        /* flex-grow: 0; */
+        /* flex-basis: 1040px; */
     }
     .content-and-toc-container {
         display: flex;
